@@ -16,7 +16,7 @@ def compute():
         os.system('python3 code.py 1> output.file 2> remarks.file')
         remark = open('remarks.file','r').read()
         outputs = open('output.file','r').read()
-	os.system('rm code.py')
+        os.system('rm code.py')
         return render_template('template.html',prog=result,remarks=remark,output=outputs)
     
 if __name__ == '__main__':
