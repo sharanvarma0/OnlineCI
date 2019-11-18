@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>TextEditor</title>
+	
+	<style>
+		textarea 
+			{ background-color: black;
+			  color: white;
+			}
+	</style>
+	</head>
+	<body style="background-color: yellow;">
+		Type Python Code and click "Interpret" to compile the code. Remarks are errors and output is result.
+		<center><form id="userinput" action="http://127.0.0.1:5000/result" method="POST">
+		<div id="inputcode">
+			<textarea rows="50" cols="100" name="prog">{{ prog }}</textarea>
+		</div>
+		<div id="remarks">
+			<h3>Remarks</h3>
+			<textarea rows="4" cols="100" name="remark">{{ remarks }}</textarea>
+		</div>
+		<div id="output">
+			<h3>Output</h3>
+			<textarea rows="4" cols="50" name="output">{{ output }}</textarea>
+		</div><br>
+		<input type="submit" value="interpret">
+		</form></center>
+	</body>
+</html>
