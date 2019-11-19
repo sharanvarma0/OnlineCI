@@ -10,9 +10,19 @@
 			}
 	</style>
 	</head>
+
 	<body style="background-color: yellow;">
 		Type Code and click "Submit" to compile/interpret the code. Remarks are errors and output is result.
 		<center><form id="userinput" action="http://127.0.0.1:5000/result" method="POST">
+			<select name ="languages">
+						<option selected="selected" disabled="disabled">Select Language</option>
+				{% for language in languages %}
+					<option value="{{language}}">{{language}}</option>
+				{% endfor %}
+			</select>
+		{% if current_lang != '' %}
+		<script> document.getElementsByName('languages')[0].value = "{{current_lang}}"; </script>
+		{% endif %}
 		<div id="inputcode">
 			<h3>Editor</h3>
 			<textarea rows="50" cols="100" name="prog">{{ prog }}</textarea>
