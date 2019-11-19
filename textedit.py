@@ -4,11 +4,11 @@ app = Flask(__name__)
 
 languages = ['Python', 'C', 'C++']
 
-@app.route('/')
-def editPython():
-        return render_template('template.html',languages=languages,current_lang='',prog='',input='',remarks='',output='')
+#@app.route('/')
+#def editPython():
+#        return render_template('template.html',languages=languages,current_lang='',prog='',input='',remarks='',output='')
 
-@app.route('/result', methods=['POST','GET'])
+@app.route('/', methods=['POST','GET'])
 def compute():
     if request.method == 'POST':
         result = request.form
@@ -28,6 +28,8 @@ def compute():
             print("C++ is in dev")
         else:
             print("You are one kind of a tester")
+        return render_template('template.html',languages=languages,current_lang='',prog='',input='',remarks='',output='')
+    elif request.method == 'GET':
         return render_template('template.html',languages=languages,current_lang='',prog='',input='',remarks='',output='')
 if __name__ == '__main__':
     app.run(debug = False)
