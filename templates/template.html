@@ -2,9 +2,9 @@
 <html>
 	<head>
 		<title>TextEditor</title>
-	
+
 	<style>
-		textarea 
+		textarea
 			{ background-color: black;
 			  color: white;
 			}
@@ -16,6 +16,10 @@
 		<div id="inputcode">
 			<textarea rows="50" cols="100" name="prog">{{ prog }}</textarea>
 		</div>
+		<div id="inputs">
+			<h3>Input</h3>
+			<textarea rows="4" cols="100" name="input">{{ input }}</textarea>
+		</div>
 		<div id="remarks">
 			<h3>Remarks</h3>
 			<textarea rows="4" cols="100" name="remark">{{ remarks }}</textarea>
@@ -24,7 +28,7 @@
 			<h3>Output</h3>
 			<textarea rows="4" cols="50" name="output">{{ output }}</textarea>
 		</div><br>
-		<input type="submit" value="interpret">
+		<input type="submit" value="Compile/Interpret">
 		</form></center>
 	</body>
 </html>
