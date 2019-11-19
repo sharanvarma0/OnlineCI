@@ -11,9 +11,10 @@
 	</style>
 	</head>
 	<body style="background-color: yellow;">
-		Type Python Code and click "Interpret" to compile the code. Remarks are errors and output is result.
+		Type Code and click "Submit" to compile/interpret the code. Remarks are errors and output is result.
 		<center><form id="userinput" action="http://127.0.0.1:5000/result" method="POST">
 		<div id="inputcode">
+			<h3>Editor</h3>
 			<textarea rows="50" cols="100" name="prog">{{ prog }}</textarea>
 		</div>
 		<div id="inputs">
@@ -28,7 +29,7 @@
 			<h3>Output</h3>
 			<textarea rows="4" cols="50" name="output">{{ output }}</textarea>
 		</div><br>
-		<input type="submit" value="Compile/Interpret">
+		<input type="submit" value="Submit">
 		</form></center>
 	</body>
 </html>
