@@ -25,7 +25,7 @@
 		{% endif %}
 		<div id="inputcode">
 			<h3>Editor</h3>
-			<textarea rows="50" cols="100" name="prog">{{ prog }}</textarea>
+			<textarea rows="50" cols="100" name="prog" onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}">{{ prog }}</textarea>
 		</div>
 		<div id="inputs">
 			<h3>Input</h3>
@@ -33,11 +33,11 @@
 		</div>
 		<div id="remarks">
 			<h3>Remarks</h3>
-			<textarea rows="4" cols="100" name="remark">{{ remarks }}</textarea>
+			<textarea rows="4" cols="100" name="remark" readonly>{{ remarks }}</textarea>
 		</div>
 		<div id="output">
 			<h3>Output</h3>
-			<textarea rows="4" cols="50" name="output">{{ output }}</textarea>
+			<textarea rows="4" cols="50" name="output" readonly>{{ output }}</textarea>
 		</div><br>
 		<input type="submit" value="Submit">
 		</form></center>
