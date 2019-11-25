@@ -9,10 +9,20 @@
 			  color: white;
 			}
 	</style>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<script>
+		function display() {
+			document.getElementById("text").innerHTML = "Type Code in the textbox and hit compile! to see the results";
+
+		}
+	</script>
 	</head>
 
 	<body style="background-color: yellow;">
-		Type Code and click "Submit" to compile/interpret the code. Remarks are errors and output is result.
+		<div id="tutorial">
+			<input type="button" value="How?" onclick="display()" />
+			<div id="text"></div>
+		</div>
 		<center><form id="userinput" action="/" method="POST">
 			<select name ="languages">
 						<option selected="selected" disabled="disabled">Select Language</option>
