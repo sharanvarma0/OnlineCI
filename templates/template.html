@@ -18,12 +18,12 @@
 	</script>
 	</head>
 
-	<body style="background-color: yellow;">
+	<body style="background-color: #F59571;">
 		<div id="tutorial">
 			<input type="button" value="How?" onclick="display()" />
 			<div id="text"></div>
 		</div>
-		<center><form id="userinput" action="/" method="POST">
+		<center><form id="userinput" action="/" method="POST" style="background-color: #EAE37E;">
 			<select name ="languages">
 						<option selected="selected" disabled="disabled">Select Language</option>
 				{% for language in languages %}
@@ -37,19 +37,19 @@
 			<h3>Editor</h3>
 			<textarea rows="50" cols="100" name="prog" onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}">{{ prog }}</textarea>
 		</div>
-		<div id="inputs">
+		<div id="inputs" style="background-color: #AAEA64;">
 			<h3>Input</h3>
-			<textarea rows="4" cols="100" name="input">{{ input }}</textarea>
+			<textarea rows="4" cols="100" name="input">{{ input }}</textarea><br>
 		</div>
-		<div id="remarks">
+		<div id="remarks" style="background-color: #6CEEC0">
 			<h3>Remarks</h3>
-			<textarea rows="4" cols="100" name="remark" readonly>{{ remarks }}</textarea>
+			<textarea rows="4" cols="100" name="remark" readonly>{{ remarks }}</textarea><br>
 		</div>
-		<div id="output">
+		<div id="output" style="background-color: #EE9E6C;">
 			<h3>Output</h3>
 			<textarea rows="4" cols="50" name="output" readonly>{{ output }}</textarea>
-		</div><br>
-		<input type="submit" value="Submit">
+		<br></div><br>
+		<input type="submit" value="Submit" style="font-size: 20px;">
 		</form></center>
 	</body>
 </html>
